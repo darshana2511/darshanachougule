@@ -3,15 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Darshana Chougule | Portfolio</title>
+<title>Darshana Chougule | DevOps Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
-body { background: #f4f4f4; color: #333; line-height: 1.6; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
 
-/* Navbar */
+body {
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
 nav {
   background: #111;
   padding: 1rem;
@@ -22,93 +32,114 @@ nav {
   top: 0;
   z-index: 1000;
 }
-nav a { color: #fff; text-decoration: none; font-weight: 500; }
-nav a:hover { color: #00bfff; }
 
-/* Hero */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #00bfff;
+}
+
+/* HERO */
 .hero {
   background: #222;
   color: #fff;
   padding: 5rem 2rem;
   text-align: center;
 }
+
 .hero img {
   width: 160px;
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1rem;
   border: 4px solid #00bfff;
+  margin-bottom: 1rem;
 }
-.hero h1 { font-size: 2.5rem; }
-.hero p { font-size: 1.1rem; }
 
-/* Sections */
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+/* SECTIONS */
 section {
   padding: 4rem 2rem;
   max-width: 1000px;
   margin: auto;
 }
+
 h2 {
   text-align: center;
   margin-bottom: 2rem;
   color: #111;
 }
 
-/* Cards */
+/* CARD */
 .card {
   background: #fff;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  margin-bottom: 1.5rem;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Skills */
+/* SKILLS */
 .skills {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
 }
+
 .skill {
   background: #fff;
   width: 220px;
-  padding: 1rem;
+  padding: 1.2rem;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Work */
+/* WORK */
 .work-card {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
   align-items: flex-start;
 }
+
 .work-card img {
   width: 70px;
-  height: auto;
 }
 
-/* Certifications */
+/* CERTIFICATIONS */
 .certifications ul {
   list-style: none;
   text-align: center;
 }
+
 .certifications li {
-  margin: 0.7rem 0;
+  margin: 0.6rem 0;
 }
+
 .certifications a {
   color: #00bfff;
   text-decoration: none;
   font-weight: 500;
 }
+
 .certifications a:hover {
   text-decoration: underline;
 }
 
-/* Contact */
+/* CONTACT */
 form {
   max-width: 500px;
   margin: auto;
@@ -116,20 +147,31 @@ form {
   flex-direction: column;
   gap: 1rem;
 }
+
 input, textarea {
-  padding: 0.8rem;
+  padding: 0.9rem;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
+
 button {
   padding: 1rem;
   border: none;
   background: #00bfff;
   color: #fff;
   font-weight: bold;
+  border-radius: 5px;
   cursor: pointer;
 }
-button:hover { background: #009acd; }
+
+button:hover {
+  background: #009acd;
+}
+
+/* FOOTER SPACING */
+footer {
+  height: 3rem;
+}
 </style>
 </head>
 
@@ -164,46 +206,36 @@ button:hover { background: #009acd; }
       to eliminate manual work, reduce operational risk, and improve service reliability.
     </p>
 
-    <p style="margin-top: 1rem;">
-      A major focus of my career has been <strong>fully automating Service Desk and IT Operations tasks</strong>.
-      I have designed and delivered automations that replaced repetitive manual activities,
-      significantly reduced ticket resolution times, and enabled 24/7 self-service operations
-      for large enterprise and government environments.
+    <p style="margin-top:1rem;">
+      A major focus of my career has been <strong>fully automating Service Desk and IT Operations</strong>,
+      replacing repetitive manual activities and enabling 24/7 self-service operations for
+      large enterprise and government environments.
     </p>
 
-    <p style="margin-top: 1rem;">
-      In addition to automation, I have built <strong>real-time monitoring and reporting solutions</strong>
-      using <strong>Splunk and Power BI</strong>. These dashboards provide deep visibility into
-      system health, automation success and failure rates, SLA compliance, and operational KPIs,
-      enabling teams to proactively identify issues and make data-driven decisions.
+    <p style="margin-top:1rem;">
+      I have also built <strong>real-time monitoring and reporting dashboards</strong> using
+      <strong>Splunk and Power BI</strong>, providing visibility into system health,
+      automation success/failure rates, SLA compliance, and operational KPIs.
     </p>
 
-    <p style="margin-top: 1rem;">
-      My work blends <strong>Cloud-Native Design, DevOps, and Intelligent Automation</strong>,
-      with experience in <strong>AI strategy, GenAI, and MLOps</strong> using Azure OpenAI,
-      Databricks, Synapse, and Cognitive Services to enhance operational efficiency and
-      customer experience.
+    <p style="margin-top:1rem;">
+      I have delivered solutions across <strong>Financial Services, Telecom, and Government</strong>
+      sectors. I am fluent in English, conversational in Dutch, and familiar with the Dutch way of working.
     </p>
 
-    <p style="margin-top: 1rem;">
-      I have successfully delivered solutions in <strong>Financial Services, Telecom, and Government</strong>
-      sectors, working in highly regulated environments. I am fluent in English,
-      conversational in Dutch, and well-versed in the Dutch way of working.
-    </p>
-
-    <h3 style="margin-top: 2rem;">Key Service Desk, Monitoring & IT Automations</h3>
-    <ul style="margin-top: 1rem; padding-left: 1.2rem;">
-      <li>User onboarding, offboarding, and access management (Azure AD & Active Directory)</li>
-      <li>Exchange Online & On-Prem automation (mailboxes, distribution groups, migrations)</li>
-      <li>MFA compliance checks with automated user notifications</li>
-      <li>ServiceNow request intake and end-to-end ticket fulfillment</li>
-      <li>SCCM & Active Directory data sync into SQL/Data Warehouse</li>
-      <li>CMDB reconciliation between AD, SCCM, and ServiceNow</li>
-      <li>Azure Runbooks for infrastructure health checks</li>
-      <li>Microsoft Intune policy backup and governance automation</li>
-      <li>CI/CD pipelines for PowerShell, infrastructure, and applications</li>
-      <li>Splunk dashboards for logs, alerts, automation tracking, and incidents</li>
-      <li>Power BI dashboards for SLA, KPIs, operational & management reporting</li>
+    <h3 style="margin-top:2rem;">Key Automations Delivered</h3>
+    <ul style="margin-top:1rem; padding-left:1.2rem;">
+      <li>User onboarding, offboarding & access management (Azure AD & AD)</li>
+      <li>Exchange Online & On-Prem automation</li>
+      <li>MFA compliance checks & notifications</li>
+      <li>ServiceNow request intake & fulfillment</li>
+      <li>SCCM & AD data sync into SQL/Data Warehouse</li>
+      <li>CMDB reconciliation & validation</li>
+      <li>Azure Runbooks for health checks</li>
+      <li>Intune policy backup automation</li>
+      <li>CI/CD pipelines for PowerShell & infrastructure</li>
+      <li>Splunk dashboards for logs & alerts</li>
+      <li>Power BI dashboards for SLA & KPIs</li>
     </ul>
   </div>
 </section>
@@ -213,9 +245,9 @@ button:hover { background: #009acd; }
   <h2>Skills</h2>
   <div class="skills">
     <div class="skill"><h3>Cloud</h3><p>Azure, AWS, GCP</p></div>
-    <div class="skill"><h3>DevOps</h3><p>CI/CD, Azure DevOps, Jenkins</p></div>
+    <div class="skill"><h3>DevOps</h3><p>CI/CD, Azure DevOps</p></div>
     <div class="skill"><h3>Automation</h3><p>PowerShell, Azure Runbooks</p></div>
-    <div class="skill"><h3>Containers</h3><p>Kubernetes, Docker, Helm</p></div>
+    <div class="skill"><h3>Containers</h3><p>Kubernetes, Docker</p></div>
     <div class="skill"><h3>Monitoring</h3><p>Splunk, Power BI</p></div>
   </div>
 </section>
@@ -225,40 +257,29 @@ button:hover { background: #009acd; }
   <h2>Work Experience</h2>
 
   <div class="card work-card">
-    <img src="cgi.png" alt="CGI Logo">
+    <img src="cgi.png" alt="CGI">
     <div>
       <h3>DevOps Engineer – CGI Netherlands</h3>
-      <p><em>Sep 2021 – Present</em></p>
-      <p>
-        Migrated enterprise platforms to Azure Cloud, built CI/CD pipelines,
-        created AKS clusters, automated deployments, and delivered monitoring
-        dashboards for large regulated environments.
-      </p>
+      <p><em>2021 – Present</em></p>
+      <p>Azure Cloud migration, CI/CD pipelines, AKS, automation, monitoring dashboards.</p>
     </div>
   </div>
 
   <div class="card work-card">
-    <img src="fujitsu.png" alt="Fujitsu Logo">
+    <img src="fujitsu.png" alt="Fujitsu">
     <div>
       <h3>DevOps Engineer – Fujitsu</h3>
-      <p><em>Jun 2019 – Jul 2021</em></p>
-      <p>
-        Delivered Azure Automation solutions for Dutch municipalities,
-        including Service Desk automation, Exchange workflows,
-        MFA enforcement, and monitoring dashboards.
-      </p>
+      <p><em>2019 – 2021</em></p>
+      <p>Service Desk automation, Exchange workflows, MFA enforcement, Azure monitoring.</p>
     </div>
   </div>
 
   <div class="card work-card">
-    <img src="atos.png" alt="Atos Logo">
+    <img src="atos.png" alt="Atos">
     <div>
       <h3>Agile Scrum Master – Atos</h3>
       <p><em>2016 – 2018</em></p>
-      <p>
-        Led Agile delivery, facilitated Scrum ceremonies,
-        coached teams, and supported telecom monitoring platforms.
-      </p>
+      <p>Scrum leadership, Agile delivery, telecom monitoring platforms.</p>
     </div>
   </div>
 </section>
@@ -267,13 +288,12 @@ button:hover { background: #009acd; }
 <section id="certifications" class="certifications">
   <h2>Certifications</h2>
   <ul>
-    <li><a href="https://learn.microsoft.com/certifications/azure-fundamentals/" target="_blank">Microsoft Azure Fundamentals (AZ-900)</a></li>
-    <li><a href="https://learn.microsoft.com/certifications/azure-administrator/" target="_blank">Microsoft Azure Administrator (AZ-104)</a></li>
-    <li><a href="https://learn.microsoft.com/certifications/azure-solutions-architect/" target="_blank">Microsoft Azure Solutions Architect Expert (AZ-305)</a></li>
-    <li><a href="https://www.scrum.org/professional-scrum-master-i-certification" target="_blank">Professional Scrum Master I</a></li>
-    <li><a href="https://www.scrum.org/professional-scrum-master-ii-certification" target="_blank">Professional Scrum Master II</a></li>
-    <li><a href="https://www.scaledagile.com/certification/safe-practitioner/" target="_blank">SAFe Practitioner</a></li>
-    <li><a href="https://www.axelos.com/certifications/itil-service-management/itil-4-foundation" target="_blank">ITIL V3 Foundation</a></li>
+    <li>Microsoft Azure Fundamentals (AZ-900)</li>
+    <li>Microsoft Azure Administrator (AZ-104)</li>
+    <li>Azure Solutions Architect Expert (AZ-305)</li>
+    <li>Professional Scrum Master I & II</li>
+    <li>SAFe Practitioner</li>
+    <li>ITIL V3 Foundation</li>
   </ul>
 </section>
 
@@ -283,10 +303,12 @@ button:hover { background: #009acd; }
   <form>
     <input type="text" placeholder="Your Name" required>
     <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message" rows="5" required></textarea>
+    <textarea rows="5" placeholder="Your Message" required></textarea>
     <button type="submit">Send Message</button>
   </form>
 </section>
+
+<footer></footer>
 
 </body>
 </html>
