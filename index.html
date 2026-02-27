@@ -3,101 +3,235 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Darshana Chougule Portfolio</title>
+<title>Darshana Chougule | Portfolio</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
-  /* Reset & basic styles */
-  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
-  body { line-height: 1.6; background: #f4f4f4; color: #333; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+body { background: #f4f4f4; color: #333; line-height: 1.6; }
 
-  /* Navbar */
-  nav { background: #111; padding: 1rem; display: flex; justify-content: center; gap: 2rem; position: sticky; top: 0; z-index: 1000;}
-  nav a { color: #fff; text-decoration: none; font-weight: 500; }
-  nav a:hover { color: #00bfff; }
+/* Navbar */
+nav {
+  background: #111;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  position: sticky;
+  top: 0;
+}
+nav a { color: #fff; text-decoration: none; }
+nav a:hover { color: #00bfff; }
 
-  /* Hero */
-  .hero { text-align: center; padding: 6rem 2rem; background: #222; color: #fff; }
-  .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-  .hero p { font-size: 1.2rem; }
+/* Hero */
+.hero {
+  background: #222;
+  color: #fff;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.hero img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 4px solid #00bfff;
+}
+.hero h1 { font-size: 2.5rem; }
+.hero p { font-size: 1.1rem; }
 
-  /* Section Styles */
-  section { padding: 4rem 2rem; max-width: 1000px; margin: auto; }
-  h2 { text-align: center; margin-bottom: 2rem; font-size: 2rem; color: #111; }
+/* Sections */
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #111;
+}
 
-  /* About Section */
-  .about p { text-align: center; font-size: 1rem; max-width: 700px; margin: auto; }
+/* Cards */
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+}
 
-  /* Skills */
-  .skills { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
-  .skill { background: #fff; padding: 1rem; border-radius: 8px; width: 200px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
-  .skill h3 { margin-bottom: 0.5rem; }
+/* Skills */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.skill {
+  background: #fff;
+  width: 220px;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
-  /* Work / Projects */
-  .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
-  .project-card { background: #fff; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-  .project-card h3 { margin-bottom: 0.5rem; }
+/* Work */
+.work-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.work-card img {
+  width: 70px;
+  height: auto;
+}
 
-  /* Contact */
-  form { display: flex; flex-direction: column; max-width: 500px; margin: auto; gap: 1rem; }
-  input, textarea { padding: 0.8rem; border-radius: 5px; border: 1px solid #ccc; width: 100%; }
-  button { padding: 1rem; border: none; background: #00bfff; color: #fff; font-weight: bold; cursor: pointer; border-radius: 5px; }
-  button:hover { background: #009acd; }
+/* Certifications */
+.certifications ul {
+  list-style: none;
+  text-align: center;
+}
+.certifications li {
+  margin: 0.7rem 0;
+}
+.certifications a {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.certifications a:hover {
+  text-decoration: underline;
+}
+
+/* Contact */
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+input, textarea {
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+button {
+  padding: 1rem;
+  border: none;
+  background: #00bfff;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover { background: #009acd; }
 </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
+<!-- NAV -->
 <nav>
   <a href="#home">Home</a>
   <a href="#about">About</a>
   <a href="#skills">Skills</a>
-  <a href="#work">Work</a>
+  <a href="#work">Experience</a>
+  <a href="#certifications">Certifications</a>
   <a href="#contact">Contact</a>
 </nav>
 
-<!-- Hero -->
+<!-- HERO -->
 <section class="hero" id="home">
+  <img src="images/darshana.jpg" alt="Darshana Chougule">
   <h1>Darshana Chougule</h1>
-  <p>DevOps Engineer | AI & DevSecOps Strategist | Automation Engineer | Platform Engineer </p>
+  <p>DevOps Engineer | Azure Automation | AI & DevSecOps | Platform Engineering</p>
 </section>
 
-<!-- About -->
-<section class="about" id="about">
+<!-- ABOUT -->
+<section id="about">
   <h2>About Me</h2>
-  <p>Highly Accomplished Technology Leader & Architect with 12+ years of expertise in AI, Cloud, and Enterprise Digital Transformations. Fluent in English and conversational in Dutch.</p>
+  <div class="card">
+    <p>
+      Result-driven DevOps & Automation Engineer with <strong>12+ years</strong> of experience in
+      Cloud, Azure Automation, CI/CD, and Enterprise Infrastructure.
+      Strong background in Financial Services, Telecom, and Government sectors.
+      Fluent in English and conversational in Dutch.
+    </p>
+  </div>
 </section>
 
-<!-- Skills -->
+<!-- SKILLS -->
 <section id="skills">
   <h2>Skills</h2>
   <div class="skills">
-    <div class="skill"><h3>Cloud Platforms</h3><p>Azure, AWS, GCP - 95%</p></div>
-    <div class="skill"><h3>Data & AI</h3><p>90%</p></div>
-    <div class="skill"><h3>DevOps & CI/CD</h3><p>90%</p></div>
-    <div class="skill"><h3>Frontend Frameworks</h3><p>Angular, React - 85%</p></div>
+    <div class="skill"><h3>Cloud</h3><p>Azure, AWS, GCP</p></div>
+    <div class="skill"><h3>DevOps</h3><p>CI/CD, Jenkins, GitHub</p></div>
+    <div class="skill"><h3>Automation</h3><p>PowerShell, Azure Runbooks</p></div>
+    <div class="skill"><h3>Containers</h3><p>Kubernetes, Docker, Helm</p></div>
+    <div class="skill"><h3>Security</h3><p>MFA, IAM, Azure AD</p></div>
   </div>
 </section>
 
-<!-- Work / Projects -->
+<!-- EXPERIENCE -->
 <section id="work">
   <h2>Work Experience</h2>
-  <div class="projects">
-    <div class="project-card">
-      <h3>Automation Engineer / CGI Netherlands</h3>
-      <p>August 2021 - Current | Client: Inadmin Riskco Designed enterprise architecture and AI/Cloud solutions.</p>
+
+  <div class="card work-card">
+    <img src="images/cgi.png" alt="CGI Logo">
+    <div>
+      <h3>DevOps Engineer – CGI Netherlands</h3>
+      <p><em>Sep 2021 – Present</em></p>
+      <p>
+        Migrated enterprise platforms to Azure Cloud, built CI/CD pipelines,
+        created AKS clusters, automated deployments, mentored teams,
+        and improved KPIs for regulated pension platforms.
+      </p>
     </div>
-    <div class="project-card">
-      <h3>DEVOPS Engineer / Fujitsu</h3>
-      <p>June 2019 - July 2021 | Client: Goverment Streamlined CI/CD and implemented scalable Azure solutions.</p>
+  </div>
+
+  <div class="card work-card">
+    <img src="images/fujitsu.png" alt="Fujitsu Logo">
+    <div>
+      <h3>DevOps Engineer – Fujitsu</h3>
+      <p><em>Jun 2019 – Jul 2021</em></p>
+      <p>
+        Delivered Azure Automation solutions for Dutch municipalities,
+        built PowerShell automations for AD, SCCM, MFA enforcement,
+        Exchange workflows, and ServiceNow integrations.
+      </p>
     </div>
-    <div class="project-card">
-      <h3>Automation Engineer / CGI</h3>
-      <p>Jun 2018 - July 2019 | Client: ING Bank. Implemented Automations which will reduce repetative tasks.</p>
+  </div>
+
+  <div class="card work-card">
+    <img src="images/atos.png" alt="Atos Logo">
+    <div>
+      <h3>Agile Scrum Master – Atos</h3>
+      <p><em>2016 – 2018</em></p>
+      <p>
+        Led Agile delivery, coached teams, facilitated Scrum ceremonies,
+        and supported large-scale telecom monitoring systems.
+      </p>
     </div>
   </div>
 </section>
 
-<!-- Contact -->
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="certifications">
+  <h2>Certifications</h2>
+  <ul>
+    <li><a href="https://learn.microsoft.com/en-us/certifications/azure-fundamentals/" target="_blank">Microsoft Azure Fundamentals (AZ-900)</a></li>
+    <li><a href="https://www.scrum.org/professional-scrum-master-i-certification" target="_blank">Professional Scrum Master I</a></li>
+    <li><a href="https://www.scrum.org/professional-scrum-master-ii-certification" target="_blank">Professional Scrum Master II</a></li>
+    <li><a href="https://www.scaledagile.com/certification/safe-practitioner/" target="_blank">SAFe Practitioner</a></li>
+    <li><a href="https://www.axelos.com/certifications/itil-service-management/itil-4-foundation" target="_blank">ITIL Foundation</a></li>
+  </ul>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
   <h2>Contact Me</h2>
   <form>
