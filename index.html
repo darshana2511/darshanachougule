@@ -3,74 +3,212 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>MyPortfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 50px;
+      background: linear-gradient(90deg, #1e90ff, #00bfff);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: white;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+      background: linear-gradient(135deg, #00bfff, #1e90ff);
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      padding: 12px 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1e90ff;
+      background-color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #ffd700;
+      color: #333;
+    }
+
+    section {
+      padding: 80px 50px;
+    }
+
+    section h3 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #1e90ff;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .project-card h4 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    footer {
+      padding: 40px 50px;
+      text-align: center;
+      background-color: #1e90ff;
+      color: white;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    @media(max-width: 768px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
+
   <header>
-    <h1 class="logo">MyPortfolio</h1>
+    <h1>MyPortfolio</h1>
     <nav>
-      <a href="#hero">Home</a>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="animated-hero">
-    <div class="hero-content">
-      <h2>Hello! I'm a Web Developer</h2>
-      <p>Creating beautiful and interactive websites with GitHub Pages.</p>
-      <a href="#projects" class="btn">View Projects</a>
-    </div>
+  <section class="hero">
+    <h2>Hello! I'm a Web Developer</h2>
+    <p>Creating beautiful and interactive websites with GitHub Pages.</p>
+    <button onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">View Projects</button>
   </section>
 
-  <!-- About Section -->
   <section id="about">
-    <h2>About Me</h2>
-    <p>I'm passionate about building web applications that are clean, responsive, and user-friendly. I love learning new technologies and sharing my work online.</p>
+    <h3>About Me</h3>
+    <p style="max-width: 700px; margin: auto; text-align: center;">
+      I'm a passionate web developer with a love for crafting modern and responsive websites. I specialize in HTML, CSS, JavaScript, and frameworks like React.
+    </p>
   </section>
 
-  <!-- Projects Section -->
   <section id="projects">
-    <h2>My Projects</h2>
-    <div class="project-grid">
+    <h3>My Projects</h3>
+    <div class="projects">
       <div class="project-card">
-        <h3>Project One</h3>
-        <p>A responsive portfolio website built with HTML, CSS, and JS.</p>
+        <img src="https://via.placeholder.com/400x200" alt="Project 1">
+        <h4>Project One</h4>
+        <p>A responsive web application built with HTML, CSS, and JavaScript.</p>
       </div>
       <div class="project-card">
-        <h3>Project Two</h3>
-        <p>An interactive JavaScript game deployed on GitHub Pages.</p>
+        <img src="https://via.placeholder.com/400x200" alt="Project 2">
+        <h4>Project Two</h4>
+        <p>A modern portfolio site using React and Tailwind CSS.</p>
       </div>
       <div class="project-card">
-        <h3>Project Three</h3>
-        <p>A modern blog template with animations and responsive design.</p>
+        <img src="https://via.placeholder.com/400x200" alt="Project 3">
+        <h4>Project Three</h4>
+        <p>An interactive dashboard with charts and data visualization.</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p id="confirmation"></p>
+    <h3>Contact Me</h3>
+    <p style="text-align: center; margin-bottom: 20px;">You can reach me at <a href="mailto:youremail@example.com">youremail@example.com</a></p>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2026 MyPortfolio. All rights reserved.</p>
+    &copy; 2026 MyPortfolio. All rights reserved.
   </footer>
 
-  <!-- JavaScript -->
-  <script src="script.js"></script>
 </body>
 </html>
