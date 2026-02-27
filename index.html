@@ -1,56 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rajendra Chougule Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  /* Reset & basic styles */
+  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+  body { line-height: 1.6; background: #f4f4f4; color: #333; }
+
+  /* Navbar */
+  nav { background: #111; padding: 1rem; display: flex; justify-content: center; gap: 2rem; position: sticky; top: 0; z-index: 1000;}
+  nav a { color: #fff; text-decoration: none; font-weight: 500; }
+  nav a:hover { color: #00bfff; }
+
+  /* Hero */
+  .hero { text-align: center; padding: 6rem 2rem; background: #222; color: #fff; }
+  .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+  .hero p { font-size: 1.2rem; }
+
+  /* Section Styles */
+  section { padding: 4rem 2rem; max-width: 1000px; margin: auto; }
+  h2 { text-align: center; margin-bottom: 2rem; font-size: 2rem; color: #111; }
+
+  /* About Section */
+  .about p { text-align: center; font-size: 1rem; max-width: 700px; margin: auto; }
+
+  /* Skills */
+  .skills { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+  .skill { background: #fff; padding: 1rem; border-radius: 8px; width: 200px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+  .skill h3 { margin-bottom: 0.5rem; }
+
+  /* Work / Projects */
+  .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+  .project-card { background: #fff; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+  .project-card h3 { margin-bottom: 0.5rem; }
+
+  /* Contact */
+  form { display: flex; flex-direction: column; max-width: 500px; margin: auto; gap: 1rem; }
+  input, textarea { padding: 0.8rem; border-radius: 5px; border: 1px solid #ccc; width: 100%; }
+  button { padding: 1rem; border: none; background: #00bfff; color: #fff; font-weight: bold; cursor: pointer; border-radius: 5px; }
+  button:hover { background: #009acd; }
+</style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header id="home">
-    <nav class="navbar">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<!-- Navbar -->
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#work">Work</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>Hello, I’m <span>Your Name</span></h1>
-    <p>Frontend Developer & Designer</p>
-  </section>
+<!-- Hero -->
+<section class="hero" id="home">
+  <h1>Rajendra Chougule</h1>
+  <p>Technology & Cloud Transformation Leader | AI & DevSecOps Strategist | Enterprise Architect</p>
+</section>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Short bio goes here.</p>
-  </section>
+<!-- About -->
+<section class="about" id="about">
+  <h2>About Me</h2>
+  <p>Highly Accomplished Technology Leader & Architect with 18+ years of expertise in AI, Cloud, and Enterprise Digital Transformations. Fluent in English and conversational in Dutch.</p>
+</section>
 
-  <!-- Work -->
-  <section id="work">
-    <h2>Projects</h2>
-    <div class="grid">
-      <div class="card">Project 1</div>
-      <div class="card">Project 2</div>
-      <div class="card">Project 3</div>
+<!-- Skills -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill"><h3>Cloud Platforms</h3><p>Azure, AWS, GCP - 95%</p></div>
+    <div class="skill"><h3>Java & J2EE</h3><p>95%</p></div>
+    <div class="skill"><h3>Data & AI</h3><p>90%</p></div>
+    <div class="skill"><h3>DevOps & CI/CD</h3><p>90%</p></div>
+    <div class="skill"><h3>Frontend Frameworks</h3><p>Angular, React - 85%</p></div>
+  </div>
+</section>
+
+<!-- Work / Projects -->
+<section id="work">
+  <h2>Work Experience</h2>
+  <div class="projects">
+    <div class="project-card">
+      <h3>SENIOR SOLUTION ARCHITECT / NTT DATA</h3>
+      <p>Jan 2024 - Current | Client: Orange Belgium. Designed enterprise architecture and AI/Cloud solutions.</p>
     </div>
-  </section>
+    <div class="project-card">
+      <h3>DEVOPS SOLUTION ARCHITECT / CGI</h3>
+      <p>Oct 2018 - Mar 2023 | Client: KPN. Streamlined CI/CD and implemented scalable Azure solutions.</p>
+    </div>
+    <div class="project-card">
+      <h3>LEAD SOLUTION ARCHITECT / CGI</h3>
+      <p>Jun 2018 - Oct 2018 | Client: Eneco. Built BoxChain application for secure energy transactions.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <form>
-      <input type="text" placeholder="Name">
-      <input type="email" placeholder="Email">
-      <textarea placeholder="Message"></textarea>
-      <button>Send</button>
-    </form>
-  </section>
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
 
-  <script src="script.js"></script>
 </body>
 </html>
